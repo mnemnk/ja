@@ -10,6 +10,7 @@ const config = {
 	kit: {
 		adapter: adapter({
 			pages: 'dist',
+			fallback: '404.html',
 		}),
 	},
 }

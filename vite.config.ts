@@ -15,6 +15,10 @@ const config = defineConfig({
 							collapsible: true,
 							items: [
 								{
+									title: 'Mnemnkの概要',
+									to: '/guide/introduction/',
+								},
+								{
 									title: 'Mnemnkのインストール',
 									to: '/guide/getting-started/',
 								},
@@ -38,7 +42,6 @@ const config = defineConfig({
 				themeColor: {
 					light: '#f2f2f2',
 					dark: '#18181b',
-					primary: '#00c4a0',
 					hover: '#00eceb',
 					gradient: {
 						start: '#00c4a0',
