@@ -47,7 +47,8 @@ const config = defineConfig({
 						start: '#00c4a0',
 						end: '#00eceb'
 					}
-				}
+				},
+				ga: 'G-XD0FENENSL',
 			}),
 			siteConfig: {
 				title: 'Mnemnk',
