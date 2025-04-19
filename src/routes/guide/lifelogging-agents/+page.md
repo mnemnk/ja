@@ -1,96 +1,97 @@
 ---
 title: Lifelogging Agents
 ---
+ここではMnemnk Lifelogging Agentsのセットアップ方法と、Mnemnkを用いた基本的なライフロギング環境の構築方法について説明する。
 
-## Installing Lifelogging Agents
+## 環境設定
 
-This section explains how to set up a basic lifelogging environment using Mnemnk.
+Mnemnk Lifelogging Agentsをインストールするための環境を構築する。
 
-### Environment Setup
+### 各種ビルドツールのインストール
 
-Before installing Lifelogging agents, you need to configure your environment and ensure several prerequisites are met for Lifelogging agents to function properly.
+Mnemnk Appは予めビルドされたバイナリーが配布されているが、Mnemnk Lifelogging Agentを含め多くのエージェントはユーザーが開発環境を持っていることを仮定している。
 
-#### Installing Various Build Tools
-
-While pre-built binaries of Mnemnk App are available from GitHub, many agents, including Lifelogging agents, assume that users have their own development environment.
-
-The tools you need will vary depending on the agent.
-For the installation described on this page, you'll need Git and Rust.
+どのようなツールが必要かは各エージェントによって異なる。
+このページのインストールではGitとRustを必要とする。
 
 - [Git](https://git-scm.com/)
 - [Rust](https://www.rust-lang.org/ja/learn/get-started)
 
-### Installing Mnemnk Lifelogging Agents
+## Mnemnk Lifelogging Agentsのインストール
 
-[Mnemnk Lifelogging Agents](https://github.com/mnemnk/mnemnk-lifelogging-agents) is a collection of lifelogging agents.
+[Mnemnk Lifelogging Agents](https://github.com/mnemnk/mnemnk-lifelogging-agents) はMnemnkをライフロギングツールとして活用する上で基本となるエージェントのコレクションである。
 
-- [Mnemnk Application](https://github.com/mnemnk/mnemnk-lifelogging-agents/tree/main/mnemnk-application): Outputs application activity
-- [Mnemnk Screen](https://github.com/mnemnk/mnemnk-lifelogging-agents/tree/main/mnemnk-screen): Outputs screen captures
-- [Mnemnk API](https://github.com/mnemnk/mnemnk-lifelogging-agents/tree/main/mnemnk-api): Acts as an API server to output information from external applications
+- [Mnemnk Application](https://github.com/mnemnk/mnemnk-lifelogging-agents/tree/main/mnemnk-application): アプリケーションのアクティブティを出力
+- [Mnemnk Screen](https://github.com/mnemnk/mnemnk-lifelogging-agents/tree/main/mnemnk-screen): スクリーンキャプチャを出力
+- [Mnemnk API](https://github.com/mnemnk/mnemnk-lifelogging-agents/tree/main/mnemnk-api): APIサーバーとなり外部アプリケーションから情報を出力
 
-Clone the repository into the "agents" directory that was created in the Mnemnk Directory you specified during Mnemnk App installation.
+### ダウンロードとビルド
+
+Mnemnk Appのインストールで指定したMnemnk Directoryにagentsというディレクトリーができているので、そこにリポジトリーをクローンする。
 
 ```sh
 cd {You Mnemnk Directory}/agents
 git clone https://github.com/mnemnk/mnemnk-lifelogging-agents.git
 ```
 
-Build the executable binaries in the cloned directory.
+クローンしたディレクトリーで実行バイナリーをビルドする。
 
 ```sh
 cd mnemnk-lifelogging-agents
 cargo build --release
 ```
 
-Restart Mnemnk App, and open lifelogging from the Agents menu in the upper right. You'll see that Application, API, and Screen have been added.
+### Agent Flow
 
-Choose Import from the File menu, and a file dialog will appear. Select `logging.json` from the `mnemnk-lifelogging-agents/` directory you cloned earlier.
+Mnemnk Appを再起動し、右上のAgentsメニューからLifeloggingを開くとApplicaiton, API, Screenが追加されている。
 
-The agents will be loaded in a stopped state, so press the play button ▶ at the bottom center to start the agents.
+FileメニューのImportを選ぶと、ファイルダイアログが出現するので、先ほどクローンした`mnemnk-lifelogging-agents/`ディレクトリーの中の`logging.json`を選択する。
+
+すると、エージェントが停止した状態で読み込まれるので中央下のプレイボタン ▶ を押しエージェントを起動する。
 
 ![](/images/guide/getting-started/screenshot-lifelogging-agents-imported.png)
 
-When started, the agents' colors will brighten.
+起動するとエージェントの色が明るくなる。
 
 ![](/images/guide/getting-started/screenshot-lifelogging-agents.png)
 
-Select "Save" from the File menu to save the configuration. (It will be saved to `agent_flows/logging.json`)
+Fileメニューから"Save"を選び保存する。(`agent_flows/logging.json`に保存される)
 
-Click Home at the left end of the navigation bar at the top of the screen, and reload (Ctrl+R). You'll notice that today's date has changed, indicating that data has been saved. 
+画面上のナビゲーションバーの左端のHomeを選択し、リロード(Ctrl+R)すると今日の日付が変化しデータが保存されたことが分かる。
 
 ![](/images/guide/getting-started/first-logging.png)
 
-Click to check it out.
+クリックして確認しよう。
 
 ![](/images/guide/getting-started/first-daily-page.png)
 
-Congratulations! 🎉
+おめでとう！🎉
 
-#### Setting Up Auto Start
+### Auto Startの設定
 
-Recording only happens while Mnemnk App is running in the background. To keep recording continuously, it's recommended to turn on "Auto Start" on the Settings page so that Mnemnk App starts when you login to the OS. Don't forget to Save and restart Mnemnk App after turning it on.
+記録はMnemnk Appがバックグラウンドで動作しているときにしか行われない。常に記録を取り続けるためにWindowsの起動時にMnemnk Appが起動するようにするには、Settingsページの"Auto Start"をオンにすることを推奨する。オンにしたらSaveし、Mnemnk Appを再起動することを忘れないように。
 
-### Installing Mnemnk Browser Extension
+## Mnemnk Browser Extensionのインストール
 
-What the author personally finds most useful is the integration with web browsing through the browser.
-In fact, Mnemnk's development began with this feature[^1].
+作者が個人的に最も便利だと思っているのがブラウザによるWebブラウジングとの連携だ。Mnemnkはそもそもこの機能から開発が始まった[^1]。
 
-Using the [Mnemnk Browser Extension](https://github.com/mnemnk/mnemnk-browser-extension), page navigations in the browser are sent to the Mnemnk API and can be utilized by Mnemnk App.
+[Mnemnk Broser Extension](https://github.com/mnemnk/mnemnk-browser-extension) を使うと、ブラウザ上でのページの移動がMnemnk APIへと送信されMnemnk Appによって活用することができる。
 
-To install it[^2]:
+インストールするためには[^2]、
 
-1. Open the release page and download `mnemnk-X.Y.Z-chrome.zip`.
-2. Open Chrome's Manage extensions `chrome://extensions/`.
-3. Turn on "Developer mode" in the upper right.
-4. Drag and drop the downloaded zip file into the browser.
+1. releaseページを開き `mnemnk-X.Y.Z-chrome.zip` をダウンロードする。
+2. ChromeのManage extensions `chrome://extensions/` を開く。
+3. 右上の"Developer mode"をオンにする。
+4. ダウンロードしたzipファイルをブラウザにドラッグアンドドロップする。
 
-You can specify the address and token for the Mnemnk API agent in the options, but the defaults are fine. It's good to change these when you change the settings of the Mnemnk API agent.
+オプションでMnemnk APIエージェントのアドレスとトークンをSettingページから指定できるが、デフォルトのままで構わない。Mnemnk APIエージェントの設定を変更したときは合わせて変更するといい。
 
-### Summary
+## まとめ
 
-In this section, we learned how to install Mnemnk lifelogging Agents and the Mnemnk Browser Extension.
-As you can see from the fact that even the basic lifelogging function of Mnemnk App is provided as an external program, the information Mnemnk App collects and how it is utilized depends on how you build your agents. You can use Mnemnk as a lifelogging tool as the author envisions, or not.
+このページではMnemnk Lifelogging AgentsとMnemnk Browser Extensionのインストールについて解説した。
 
-[^1]: Development initially began in March 2020 under the name "everything." That's a story for another time.
+Mnemnk Appの基本的な機能であるライフロギング機能でさえも外部プログラムとして提供されていることからも分かるように、Mnemnk Appが収集する情報とその活用方法はエージェントをどのように構築するかによって決まっている。君は、作者が想定するライフロギングツールとしてMnemnkを活用してもいいし、活用しなくてもいい。
 
-[^2]: We're also working on submitting it to the Chrome Web Store, but there are various procedures needed, such as having a homepage with a Privacy Policy...
+[^1]: 当初はeverythingという名前で2020年3月に開発が始まった。その話は機会があれば。
+
+[^2]: Chrome Web Storeへの申請も進めていますが、Privacy Policyを配置したホームページが必要など手続きが色々とありまして...

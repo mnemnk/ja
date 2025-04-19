@@ -15,11 +15,11 @@ const config = defineConfig({
 				sidebar: {
 					'/guide': [
 						{
-							title: 'Introduction',
+							title: 'イントロダクション',
 							collapsible: true,
 							items: [
 								{
-									title: 'Getting Started',
+									title: 'Mnemnkのインストール',
 									to: '/guide/getting-started/',
 								},
 								{

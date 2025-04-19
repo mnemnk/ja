@@ -1,92 +1,88 @@
 ---
-title: Getting Started
+title: Mnemnkのインストール
 ---
+ここではMnemnkを使い始める方法について説明する。
 
-## Installing Mnemnk
+Mnemnk AppはTauriを用いて作成されており、Windows, macOS, Linux上で実行できる。
+ここではインストール手順では、Windows環境でのMnemnkのセットアップを中心に説明する。
 
-This section explains how to get started with Mnemnk.
+## Mnemnk Appのインストール (Windows)
 
-Mnemnk App is created using Tauri and can run on Windows, macOS, and Linux.
-This installation guide primarily focuses on setting up Mnemnk in a Windows environment.
-
-### Installing Mnemnk App (Windows)
-
-Download Mnemnk App from the [GitHub releases page](https://github.com/mnemnk/mnemnk-app/releases). The `_aarch64.dmg` file is for macOS, `_amd64.deb` is for Linux, and `_x64_en-US.msi` is for Windows.
-
+Mnemnk Appを[GitHubのリリースページ](https://github.com/mnemnk/mnemnk-app/releases)からダウンロードする。`_aarch64.dmg`がmacOS用、`_amd64.deb`がLinux用、`_x64_en-US.msi`がWindows用である。
 
 ![](/images/guide/getting-started/mnemnk-release-page.png)
 
-If you see the following warning when opening the downloaded file, click "More info" and then click "Run anyway".
+ダウンロードしたファイルを開いたときに次の警告が出た場合は "More info" をクリックし、 "Run anyway" をクリックしてほしい。
 
 ![](/images/guide/getting-started/windows-protect.png)
 
-When you run it, a setup wizard will open. Follow the wizard to complete the installation.
+実行するとセットアップウィザードが開くのでウィザードに従いインストールを行う。
 
 ![](/images/guide/getting-started/mnemnk-setup-wizard1.png)
 
 ![](/images/guide/getting-started/mnemnk-setup-wizard2.png)
 
-You can install it anywhere you want.
+インストールの場所はどこでも構わない。
 
 ![](/images/guide/getting-started/mnemnk-setup-wizard3.png)
 
-Accept the UAC prompt when it appears.
+UACが開くので了承する。
 
 ![](/images/guide/getting-started/mnemnk-setup-wizard4.png)
 
-Mnemnk App doesn't open a window just by launching it. You can confirm it's running in the system tray at the bottom right of your desktop.
+Mnemnk Appは起動しただけではウィンドウを開かない。デスクトップ右下のタスクトレイで動作を確認できる。
 
-To open the window, either select "Show" from the menu of the tray icon or double-click the icon created on the desktop.
+タスクトレイ内のアイコンのメニューから"Show"を選択するか、デスクトップに作成されたアイコンをダブルクリックするとウィンドウが開く。
 
-### Configuring Mnemnk App
+## Mnemnk Appの設定
 
-When you start Mnemnk for the first time, the Settings page will open. (If it doesn't appear, click the gear ⚙ icon.)
-
+はじめてMnemnkを起動するとSettingsページが開く。（表示されない場合は歯車⚙のアイコンをクリックする）
 
 ![](/images/guide/getting-started/settings.png)
 
-At a minimum, you need to configure the Mnemnk Directory.
+最低限、Mnemnk Directoryだけは設定を行う必要がある。
 
-#### Mnemnk Directory
+### Mnemnk Directory
 
-Specify an empty directory (folder) as the Mnemnk Directory. The following three directories will be created there:
+Mnemnk Directoryとして空のディレクトリー（フォルダー）を指定する。ここには以下の3つのディレクトリーが作成される。
 
-- agent_flows: Where agent flows are saved.
-- agents: Place agents here.
-- data: Where the database and screenshots are saved.
+- agent_flows: エージェントフローが保存される。
+- agents: カスタムエージェントをここに配置する。
+- data: データベースとスクリーンショットが保存される。
 
 :::warning
-Directories in cloud storage (OneDrive, iCloud, etc.) are not recommended.
-Database files might be corrupted.
+クラウドストレージ（OneDrive, iCloudなど）内のディレクトリーは指定しないように。
+最悪のケースでは、データベースファイルが破壊されるかもしれない。
 :::
 
-<Expansion title="Other Settings (Optional)" showIcon={false}>
+ディレクトリーを指定したら、その他の設定はデフォルトのままで構わないので"Save"をクリックしMnemnk Appを終了する。再度、起動すると指定したデフォルトに上記の3つのディレクトリーが作成される。
 
-#### Auto Start
+<Expansion title="その他の設定 (Optional)" showIcon={false}>
 
-When enabled, Mnemnk App will automatically start when you login.
+### Auto Start
 
-#### Shortcut Keys
+オンにするとOSの起動時にMnemnk Appが自動起動する。
 
-- Global Shortcut: Shortcut to invoke Mnemnk App.
-- Fullscreen: Full-screen display
-- Screenshot Only: Hide information in the daily view. The space key is set by default.
-- Search: Go to the search page
+### Shortcut Keys
 
-#### Thumbnail Width / Height
+- Global Shortcut: Mnemnk Appを呼び出すためのショートカット。
+- Fullscreen: 全画面表示
+- Screenshot Only: daily表示で情報を非表示に。デフォルトでスペースキーが設定されている。
+- Search: searchページを開く
 
-The size of thumbnails used in the daily page. If only one is specified, the aspect ratio of the image will be preserved. The default is `Height = 36`.
+### Thumbnail Width / Height
 
-#### Day Start Hour
+daily pageで用いられるthumbnailのサイズ。どちらか一方だけを指定すると画像の縦横比を守る。デフォルトはHeight = 36となっている。
 
-Set what hour should be considered the start of a day on the daily page. The default is 0 (12:00 am). Night owls might find that with the default setting, late-night work is split between two days, so it's good to set this according to your bedtime.
+### Day Start Hour
 
-If you change this setting, click Reindex YMD to reindex past data. (Don't close the app for a while after clicking.)
+daily pageの一日の開始時間を何時にするかを設定する。デフォルトは0時（12:00 pm)。夜型の人はデフォルトでは深夜の作業が2日に分かれてしまうため、就寝時間に合わせて設定するといい。
+設定した場合、過去のデータの再インデックスをする場合はReindex YMDをクリックする。（クリック後、しばらくアプリを終了しないように）
 
 </Expansion>
 
-### Summary
+## まとめ
 
-In this section, we learned how to install, set up, and run Mnemnk App.
+このページではMnemnk Appをインストールし立ち上げて実行する方法を学んだ。
 
-If you want to use Mnemnk as a lifelogging tool, please proceed to install the [Lifelogging Agents](/guide/lifelogging-agents).
+Mnemnkをライフロギングツールとして活用するためには、次の [Lifelogging Agents](/guide/lifelogging-agents) へ進んでほしい。
