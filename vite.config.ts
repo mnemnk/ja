@@ -1,17 +1,13 @@
 import { defaultTheme } from '@sveltepress/theme-default'
 import { sveltepress } from '@sveltepress/vite'
 import { defineConfig } from 'vite'
+import navbar from './config/navbar'
 
 const config = defineConfig({
 	plugins: [
 		sveltepress({
 			theme: defaultTheme({
-				navbar: [
-					{
-						title: 'Guide',
-						to: '/guide/getting-started/',
-					},
-				],
+				navbar,
 				sidebar: {
 					'/guide': [
 						{
