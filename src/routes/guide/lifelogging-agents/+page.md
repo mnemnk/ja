@@ -75,7 +75,7 @@ Fileメニューから"Save"を選び保存する。(`agent_flows/logging.json`�
 
 作者が個人的に最も便利だと思っているのがブラウザによるWebブラウジングとの連携だ。Mnemnkはそもそもこの機能から開発が始まった。
 
-[Mnemnk Broser Extension](https://github.com/mnemnk/mnemnk-browser-extension) を使うと、ブラウザ上でのページの移動がMnemnk APIへと送信されMnemnk Appによって活用することができる。
+[Mnemnk Browser Extension](https://github.com/mnemnk/mnemnk-browser-extension) を使うと、ブラウザ上でのページの移動がMnemnk APIへと送信されMnemnk Appによって活用することができる。
 
 インストールするためには、
 
