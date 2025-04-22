@@ -1,88 +1,111 @@
 ---
-title: Mnemnkのインストール
+title: Getting Started
 ---
-ここではMnemnkを使い始める方法について説明する。
+ここではMnemnkをはじめて使う人を対象として、基本的なコンセプトと操作を説明します。
 
-Mnemnk AppはTauriを用いて作成されており、Windows, macOS, Linux上で実行できる。
-ここではインストール手順では、Windows環境でのMnemnkのセットアップを中心に説明する。
+Mnemnkがすでにインストールされているなら、実際に試しながら読むこともできます。
 
-## Mnemnk Appのインストール (Windows)
+## Agents
 
-Mnemnk Appを[GitHubのリリースページ](https://github.com/mnemnk/mnemnk-app/releases)からダウンロードする。`_aarch64.dmg`がmacOS用、`_amd64.deb`がLinux用、`_x64_en-US.msi`がWindows用である。
+Mnemnkはエージェントを自由に組み合わせることでさまざまな処理を行うことができます。
 
-![](/images/guide/getting-started/mnemnk-release-page.png)
+![](/images/guide/getting-started/initial-agent-page.png)
 
-ダウンロードしたファイルを開いたときに次の警告が出た場合は "More info" をクリックし、 "Run anyway" をクリックしてほしい。
+Agentsページの右上の「Agents」メニューから Core > Utils > Counter を選んでCounterエージェントを配置してみましょう。
 
-![](/images/guide/getting-started/windows-protect.png)
+![](/images/guide/getting-started/first-agent.png)
 
-実行するとセットアップウィザードが開くのでウィザードに従いインストールを行う。
+配置したばかりのエージェントは停止状態になっています。
 
-![](/images/guide/getting-started/mnemnk-setup-wizard1.png)
+画面下のプレイボタン▶を押すか、エージェントを右クリックして「Start」を選択することでエージェントを起動できます。
 
-![](/images/guide/getting-started/mnemnk-setup-wizard2.png)
+![](/images/guide/getting-started/start-agent.png)
 
-インストールの場所はどこでも構わない。
+エージェントは入力と出力を持ちます。
 
-![](/images/guide/getting-started/mnemnk-setup-wizard3.png)
+次に、他のエージェントと接続してみましょう。
 
-UACが開くので了承する。
+Core > Input > Unit Input を配置し、Unit InputのUnitハンドル（左側）とCounterのInハンドル（右側）を接続します。
 
-![](/images/guide/getting-started/mnemnk-setup-wizard4.png)
+![](/images/guide/getting-started/connect-agents.png)
 
-Mnemnk Appは起動しただけではウィンドウを開かない。デスクトップ右下のタスクトレイで動作を確認できる。
+Unit Inputエージェントを起動してもCounterの値は変化しません。
 
-タスクトレイ内のアイコンのメニューから"Show"を選択するか、デスクトップに作成されたアイコンをダブルクリックするとウィンドウが開く。
+![](/images/guide/getting-started/start-input.png)
 
-## Mnemnk Appの設定
+Unit InputのunitをクリックするとCounterの値が上昇します。
+これはUnit Inputがシグナルを送信し、Counterがそれを受け取って値を増加させているためです。
 
-はじめてMnemnkを起動するとSettingsページが開く。（表示されない場合は歯車⚙のアイコンをクリックする）
+![](/images/guide/getting-started/click-input.png)
 
-![](/images/guide/getting-started/settings.png)
+Mnemnkのエージェントはプレイボタンが押されたときに1度だけ実行されるのではなく、常に動作し続けます。
 
-最低限、Mnemnk Directoryだけは設定を行う必要がある。
+これを確認するために、Core > Utils > Interval TimerをCounterに接続してみましょう。
 
-### Mnemnk Directory
+![](/images/guide/getting-started/interval-timer.png)
 
-Mnemnk Directoryとして空のディレクトリー（フォルダー）を指定する。ここには以下の3つのディレクトリーが作成される。
+エージェントは、（入力を持つ場合）入力に応じた処理を行い、必要に応じて出力を行います。
 
-- agent_flows: エージェントフローが保存される。
-- agents: カスタムエージェントをここに配置する。
-- data: データベースとスクリーンショットが保存される。
+## Flows
 
-:::warning
-クラウドストレージ（OneDrive, iCloudなど）内のディレクトリーは指定しないように。
-最悪のケースでは、データベースファイルが破壊されるかもしれない。
-:::
+エージェントを配置し接続したものを「フロー」と呼びます。
+Mnemnkでは複数のフローを管理できます。
 
-ディレクトリーを指定したら、その他の設定はデフォルトのままで構わないので"Save"をクリックしMnemnk Appを終了する。再度、起動すると指定したデフォルトに上記の3つのディレクトリーが作成される。
+File > New から新しいフローを作成することができます。
 
-<Expansion title="その他の設定 (Optional)" showIcon={false}>
+![](/images/guide/getting-started/new-flow.png)
 
-### Auto Start
+フロー名を入力すると、新しい空のフローが作成されます。
 
-オンにするとOSの起動時にMnemnk Appが自動起動する。
+![](/images/guide/getting-started/new-flow-dialog.png)
 
-### Shortcut Keys
+![](/images/guide/getting-started/flow2.png)
 
-- Global Shortcut: Mnemnk Appを呼び出すためのショートカット。
-- Fullscreen: 全画面表示
-- Screenshot Only: daily表示で情報を非表示に。デフォルトでスペースキーが設定されている。
-- Search: searchページを開く
+フローは画面左側の「Flows」メニューで切り替えることができます。
 
-### Thumbnail Width / Height
+フロー名の左に表示される <span class="flex-none inline-block w-2 h-2 bg-green-500 rounded-full" title="active"></span> マークは、そのフロー内に動作中のエージェントが存在することを示しています。
 
-daily pageで用いられるthumbnailのサイズ。どちらか一方だけを指定すると画像の縦横比を守る。デフォルトはHeight = 36となっている。
+重要なポイントとして、あるフローが表示されていなくても（バックグラウンドにあっても）、そのフロー内のエージェントは動作し続けます。
 
-### Day Start Hour
+![](/images/guide/getting-started/background-flow.png)
 
-daily pageの一日の開始時間を何時にするかを設定する。デフォルトは0時（12:00 pm)。夜型の人はデフォルトでは深夜の作業が2日に分かれてしまうため、就寝時間に合わせて設定するといい。
-設定した場合、過去のデータの再インデックスをする場合はReindex YMDをクリックする。（クリック後、しばらくアプリを終了しないように）
+Fileメニューからフローを操作することができます。
+作成したフローはFile > Save (Ctrl+S) から保存できます。
+保存したフローはMnemnk App終了後も保持され、次回起動時に自動的に読み込まれます。
 
-</Expansion>
+さらに、前回終了時に動作していたエージェントは、Mnemnk App起動時に自動的に起動します。
 
-## まとめ
+## Board
 
-このページではMnemnk Appをインストールし立ち上げて実行する方法を学んだ。
+Mnemnkの持つ特徴的なエージェントにBoard InとBoard Outというエージェントがあります。
 
-Mnemnkをライフロギングツールとして活用するためには、次の [Lifelogging Agents](/guide/lifelogging-agents) へ進んでほしい。
+Board Inエージェントを用意しBoard Nameを`counter`と設定します。
+そしてCounterのcountと接続します。
+
+![](/images/guide/getting-started/board-in.png)
+
+これによって`counter`という名前のボードが作成されます。
+
+続いて、Board OutエージェントとDisplay Dataエージェントを用意します。
+Board OutのBoard Nameも`counter`とすることで、先ほど作成した`counter`ボードをサブスクライブすることができます。
+
+![](/images/guide/getting-started/board-out.png)
+
+Display DataはCounterと直接、繋がっていませんが、Board InとBoard Outを通してデータを受け取ることができました。
+
+Boardを用いると異なるフロー間でもデータをやり取りすることができます。
+
+Flowsから「flow2」に移動し、さきほどと同様にBoard OutとDisplay Dataを作成します。
+
+（shift + mouse dragで複数のエージェントを選択し、Ctrl+C, Ctrl+Vでコピー＆ペーストすることもできます）
+
+![](/images/guide/getting-started/board-out-another-flow.png)
+
+「main」フローで更新されているのと同じ値が「flow2」でも表示されることが確認できます。
+これはボードを通じてフロー間でデータが共有されているためです。
+
+## おわりに
+
+ここでは、Mnemnkの基本的なコンセプトと操作を単純なエージェントを用いて説明しました。
+
+実際の使用では、単なるカウンターではなく、ライフロギングデータをAIエージェントによって分析・活用するような複雑なフローを構築することになるでしょう。しかし、どんなに複雑なフローでも、ここで学んだ基本原理—エージェントの配置、接続、ボードによる通信—は変わりません。

@@ -11,16 +11,16 @@ const config = defineConfig({
 				sidebar: {
 					'/guide': [
 						{
-							title: 'イントロダクション',
+							title: 'はじめに',
 							collapsible: true,
 							items: [
 								{
-									title: 'Mnemnkの概要',
-									to: '/guide/introduction/',
+									title: 'Getting Started',
+									to: '/guide/getting-started/',
 								},
 								{
 									title: 'Mnemnkのインストール',
-									to: '/guide/getting-started/',
+									to: '/guide/installation/',
 								},
 								{
 									title: 'Lifelogging Agents',
@@ -28,6 +28,20 @@ const config = defineConfig({
 								},
 							]
 						},
+						// {
+						// 	title: 'Core Concepts',
+						// 	collapsible: true,
+						// 	items: [
+						// 		{
+						// 			title: 'Agents',
+						// 			to: '/guide/agents/',
+						// 		},
+						// 		{
+						// 			title: 'Flow and Channel',
+						// 			to: '/guide/flow-and-channel/',
+						// 		},
+						// 	]
+						// },
 					],
 				},
 				github: 'https://github.com/mnemnk/mnemnk-app',
@@ -42,6 +56,7 @@ const config = defineConfig({
 				themeColor: {
 					light: '#f2f2f2',
 					dark: '#18181b',
+					primary: '#00c4a0',
 					hover: '#00eceb',
 					gradient: {
 						start: '#00c4a0',
