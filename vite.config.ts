@@ -28,20 +28,20 @@ const config = defineConfig({
 								},
 							]
 						},
-						// {
-						// 	title: 'Core Concepts',
-						// 	collapsible: true,
-						// 	items: [
-						// 		{
-						// 			title: 'Agents',
-						// 			to: '/guide/agents/',
-						// 		},
-						// 		{
-						// 			title: 'Flow and Channel',
-						// 			to: '/guide/flow-and-channel/',
-						// 		},
-						// 	]
-						// },
+						{
+							title: 'Core Concepts',
+							collapsible: true,
+							items: [
+								{
+									title: 'Agents',
+									to: '/guide/agents/',
+								},
+								{
+									title: 'Flow and Channel',
+									to: '/guide/flow-and-channel/',
+								},
+							]
+						},
 					],
 				},
 				github: 'https://github.com/mnemnk/mnemnk-app',
