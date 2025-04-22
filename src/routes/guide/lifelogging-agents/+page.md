@@ -73,11 +73,11 @@ Fileメニューから"Save"を選び保存する。(`agent_flows/logging.json`�
 
 ## Mnemnk Browser Extensionのインストール
 
-作者が個人的に最も便利だと思っているのがブラウザによるWebブラウジングとの連携だ。Mnemnkはそもそもこの機能から開発が始まった[^1]。
+作者が個人的に最も便利だと思っているのがブラウザによるWebブラウジングとの連携だ。Mnemnkはそもそもこの機能から開発が始まった。
 
 [Mnemnk Broser Extension](https://github.com/mnemnk/mnemnk-browser-extension) を使うと、ブラウザ上でのページの移動がMnemnk APIへと送信されMnemnk Appによって活用することができる。
 
-インストールするためには[^2]、
+インストールするためには、
 
 1. releaseページを開き `mnemnk-X.Y.Z-chrome.zip` をダウンロードする。
 2. ChromeのManage extensions `chrome://extensions/` を開く。
@@ -91,7 +91,3 @@ Fileメニューから"Save"を選び保存する。(`agent_flows/logging.json`�
 このページではMnemnk Lifelogging AgentsとMnemnk Browser Extensionのインストールについて解説した。
 
 Mnemnk Appの基本的な機能であるライフロギング機能でさえも外部プログラムとして提供されていることからも分かるように、Mnemnk Appが収集する情報とその活用方法はエージェントをどのように構築するかによって決まっている。君は、作者が想定するライフロギングツールとしてMnemnkを活用してもいいし、活用しなくてもいい。
-
-[^1]: 当初はeverythingという名前で2020年3月に開発が始まった。その話は機会があれば。
-
-[^2]: Chrome Web Storeへの申請も進めていますが、Privacy Policyを配置したホームページが必要など手続きが色々とありまして...
