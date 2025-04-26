@@ -15,6 +15,14 @@ const config = defineConfig({
 							collapsible: true,
 							items: [
 								{
+									title: 'イントロダクション',
+									to: '/guide/introduction/',
+								},
+								{
+									title: 'インストール',
+									to: '/guide/installation/',
+								},
+								{
 									title: 'Getting Started',
 									to: '/guide/getting-started/',
 								},
