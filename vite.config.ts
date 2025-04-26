@@ -44,6 +44,10 @@ const config = defineConfig({
 									title: 'Flow and Channel',
 									to: '/guide/flow-and-channel/',
 								},
+								{
+									title: 'Board',
+									to: '/guide/board/',
+								},
 							]
 						},
 					],
