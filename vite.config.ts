@@ -27,10 +27,6 @@ const config = defineConfig({
 									to: '/guide/getting-started/',
 								},
 								{
-									title: 'Mnemnkのインストール',
-									to: '/guide/installation/',
-								},
-								{
 									title: 'Lifelogging Agents',
 									to: '/guide/lifelogging-agents/',
 								},
