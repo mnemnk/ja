@@ -5,15 +5,15 @@ title: Board
 
 Mnemnkには`Board In`と`Board Out`という2種類のノードがある。
 
-![](/images/guide/board/board-in-out.png)
+![](/images/guide/concepts/board/board-in-out.png)
 
 エージェントは`Board In`に値を送ることで、board nameで指定した"ボード"に値を書き込むことができる。
 
-![](/images/guide/board/board-in.png)
+![](/images/guide/concepts/board/board-in.png)
 
 書き込まれた値は、同じboard nameの`Board Out`に繋がっているエージェントに出力される。
 
-![](/images/guide/board/board-out.png)
+![](/images/guide/concepts/board/board-out.png)
 
 ボードを用いることでエージェントを直接繋ぐ以外の方法で情報を伝達することができる。
 
@@ -40,7 +40,7 @@ board nameを設定していない、`Board In`や`Board Out`は無効である�
 
 これは例えば、APIエージェントの出力をボードに書き込む際に用いられている。
 
-![](/images/guide/board/board-star.png)
+![](/images/guide/concepts/board/board-star.png)
 
 `Board Out`はボード名を`*`にすることはできない。
 

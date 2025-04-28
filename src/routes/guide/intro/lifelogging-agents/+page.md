@@ -49,21 +49,21 @@ FileメニューのImportを選ぶと、ファイルダイアログが表示さ�
 
 すると、ライフロギングのためのエージェントのフローが停止した状態で読み込まれますので、中央下のプレイボタン ▶ を押して起動します。
 
-![](/images/guide/lifelogging-agents/screenshot-lifelogging-agents-imported.png)
+![](/images/guide/intro/lifelogging-agents/screenshot-lifelogging-agents-imported.png)
 
 起動するとエージェントの色が明るくなります。
 
-![](/images/guide/lifelogging-agents/screenshot-lifelogging-agents.png)
+![](/images/guide/intro/lifelogging-agents/screenshot-lifelogging-agents.png)
 
 Fileメニューから"Save"を選び保存します（`agent_flows/logging.json`に保存されます）。
 
 画面上のナビゲーションバーの左端のHomeを選択し、リロード(Ctrl+R)すると今日の日付が変化しデータが保存されたことが分かります。
 
-![](/images/guide/lifelogging-agents/first-logging.png)
+![](/images/guide/intro/lifelogging-agents/first-logging.png)
 
 クリックして確認してみましょう。
 
-![](/images/guide/lifelogging-agents/first-daily-page.png)
+![](/images/guide/intro/lifelogging-agents/first-daily-page.png)
 
 あなたのアクティビティが保存されはじめました。🎉
 
