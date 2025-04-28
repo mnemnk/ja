@@ -6,7 +6,7 @@ tagline: あなたの活動を記録しマルチエージェントシステム�
 actions:
   - label: Read the docs
     type: primary
-    to: /guide/introduction/
+    to: /guide/intro/introduction/
   - label: View on github
     type: flat
     to: https://github.com/mnemnk/mnemnk-app

@@ -2,56 +2,14 @@ import { defaultTheme } from '@sveltepress/theme-default'
 import { sveltepress } from '@sveltepress/vite'
 import { defineConfig } from 'vite'
 import navbar from './config/navbar'
+import sidebar from './config/sidebar'
 
 const config = defineConfig({
 	plugins: [
 		sveltepress({
 			theme: defaultTheme({
 				navbar,
-				sidebar: {
-					'/guide': [
-						{
-							title: 'はじめに',
-							collapsible: true,
-							items: [
-								{
-									title: 'イントロダクション',
-									to: '/guide/introduction/',
-								},
-								{
-									title: 'インストール',
-									to: '/guide/installation/',
-								},
-								{
-									title: 'Getting Started',
-									to: '/guide/getting-started/',
-								},
-								{
-									title: 'Lifelogging Agents',
-									to: '/guide/lifelogging-agents/',
-								},
-							]
-						},
-						{
-							title: 'Core Concepts',
-							collapsible: true,
-							items: [
-								{
-									title: 'Agents',
-									to: '/guide/agents/',
-								},
-								{
-									title: 'Flow and Channel',
-									to: '/guide/flow-and-channel/',
-								},
-								{
-									title: 'Board',
-									to: '/guide/board/',
-								},
-							]
-						},
-					],
-				},
+				sidebar,
 				github: 'https://github.com/mnemnk/mnemnk-app',
 				logo: '/mnemnk.png',
 				preBuildIconifyIcons: {
