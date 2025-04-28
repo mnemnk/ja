@@ -23,7 +23,7 @@ Agentsページの左端にはフローの名前が並んでいる。
 
 1つの入力チャンネルに複数のエージェントからの接続を行うことも、1つの出力チャンネルから複数のエージェントへ接続を行うこともできる。
 
-![](/images/guide/flow-and-channel/in-out-channels.png)
+![](/images/guide/concepts/flow-and-channel/in-out-channels.png)
 
 エージェントは入力チャンネルにデータが送られてきたときに`process`が呼び出され、任意のタイミングで出力を行う。
 

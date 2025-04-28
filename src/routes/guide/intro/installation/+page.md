@@ -10,25 +10,25 @@ Mnemnk AppはTauriを用いて作成されており、Windows、macOS、Linux上
 
 Mnemnk Appを[GitHubのリリースページ](https://github.com/mnemnk/mnemnk-app/releases)からダウンロードします。`_aarch64.dmg`がmacOS用、`_amd64.deb`がLinux用、`_x64_en-US.msi`がWindows用です。
 
-![](/images/guide/installation/mnemnk-release-page.png)
+![](/images/guide/intro/installation/mnemnk-release-page.png)
 
 ダウンロードしたファイルを開いたときに次の警告が出た場合は "More info" をクリックし、 "Run anyway" をクリックしてください。
 
-![](/images/guide/installation/windows-protect.png)
+![](/images/guide/intro/installation/windows-protect.png)
 
 実行するとセットアップウィザードが開くので、ウィザードに従いインストールを行います。
 
-![](/images/guide/installation/mnemnk-setup-wizard1.png)
+![](/images/guide/intro/installation/mnemnk-setup-wizard1.png)
 
-![](/images/guide/installation/mnemnk-setup-wizard2.png)
+![](/images/guide/intro/installation/mnemnk-setup-wizard2.png)
 
 インストールの場所はどこでも構いません。
 
-![](/images/guide/installation/mnemnk-setup-wizard3.png)
+![](/images/guide/intro/installation/mnemnk-setup-wizard3.png)
 
 UACが開いたときは了承します。
 
-![](/images/guide/installation/mnemnk-setup-wizard4.png)
+![](/images/guide/intro/installation/mnemnk-setup-wizard4.png)
 
 Mnemnk Appは起動しただけではウィンドウを開きません。デスクトップ右下のタスクトレイで動作を確認できます。
 
@@ -38,7 +38,7 @@ Mnemnk Appは起動しただけではウィンドウを開きません。デス�
 
 はじめてMnemnkを起動するとSettingsページが開きます。（表示されない場合は歯車⚙のアイコンをクリックしてください）
 
-![](/images/guide/installation/settings.png)
+![](/images/guide/intro/installation/settings.png)
 
 最低限、Mnemnk Directoryだけは設定を行う必要があります。
 

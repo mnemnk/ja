@@ -3,7 +3,7 @@ title: Agents
 ---
 エージェントというとAIエージェントのような知的な処理を行うものを想像するかもしれない。
 
-![](/images/guide/agents/chat-model-agent.png)
+![](/images/guide/concepts/agents/chat-model-agent.png)
 
 もちろん、これもエージェントの一種だが、Mnemnkでは単純なものから知的なものまで、さまざまな処理をすべてエージェントとして統一的に扱う。
 
@@ -18,7 +18,7 @@ title: Agents
 
 Mnemnkではこれらのエージェントを組み合わせることで、複雑な処理を行うフローを構築できる。
 
-![](/images/guide/agents/simple-chat-bot.png)
+![](/images/guide/concepts/agents/simple-chat-bot.png)
 
 ## Agent
 
@@ -30,7 +30,7 @@ Mnemnkではこれらのエージェントを組み合わせることで、複�
 
 次の例は`Integer Input`、`Memory`、`Display Data`を配置したところである。
 
-![](/images/guide/agents/first-agent-flow1.png)
+![](/images/guide/concepts/agents/first-agent-flow1.png)
 
 ### Config
 
@@ -68,7 +68,7 @@ global configはSettingsページで設定でき、これはCore Settingsと同�
 `Integer Input`の`integer`から`Memory`の`in`へ、`Memory`の`memory`から`Display Data`の`data`へと接続したら、画面下のプレイボタン▶を押して動作状態にする。
 するとこのように表示される：
 
-![](/images/guide/agents/first-agent-flow2.png)
+![](/images/guide/concepts/agents/first-agent-flow2.png)
 
 `Integer Input`の値を変えると、その度に`Display Data`の表示が更新される。
 `Display Data`には`Memory`が出力する最大10個の直近の値が表示されている。
@@ -87,7 +87,7 @@ global configはSettingsページで設定でき、これはCore Settingsと同�
 そして、`process`での処理の結果を出力チャンネルへと出力する。
 このとき複数の出力チャンネルに異なる出力を行うエージェントも存在する。
 
-![](/images/guide/agents/web-base-loader-agent.png)
+![](/images/guide/concepts/agents/web-base-loader-agent.png)
 
 また、受け取ったdataによっては`process`の結果として何も出力を行わない場合もある。
 
@@ -100,7 +100,7 @@ Agentページのプレイボタン▶を押すと、表示されているフロ
 また、`Application`エージェントや`Screen`エージェントのように、`process`の呼び出しによらず、実行状態において能動的にデータを出力するものもある。
 フローは、このようにエージェントからエージェントへデータが送られることによって実行される。
 
-<video src="/images/guide/agents/interval-timer.mp4" controls="true" width="720px">interval timer</video>
+<video src="/images/guide/concepts/agents/interval-timer.mp4" controls="true" width="720px">interval timer</video>
 
 エージェントはフロー内で1度だけ実行されるのではなく、停止しない限りずっと実行状態であり続け、入力を受けるたびに`process`が呼び出される。
 
