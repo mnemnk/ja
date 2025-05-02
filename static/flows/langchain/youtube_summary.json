@@ -1,0 +1,320 @@
+{
+  "nodes": [
+    {
+      "id": "$string_input_kSNm4KPMypumnHtY-2B9x",
+      "name": "$string_input",
+      "enabled": true,
+      "config": {
+        "string": "https://www.youtube.com/watch?v=-pb3z2w9gDg"
+      },
+      "x": -412.3256214920105,
+      "y": -1232.5990338581228,
+      "width": 564,
+      "height": 177
+    },
+    {
+      "id": "$board_out_yMIyE_--qzDhTF2IwnwPs",
+      "name": "$board_out",
+      "enabled": true,
+      "config": {
+        "$board": "youtube summary url"
+      },
+      "x": -384.7760735746504,
+      "y": -106.77636874317643
+    },
+    {
+      "id": "$board_in_cQKvu7nWI9WBmxiVl1L93",
+      "name": "$board_in",
+      "enabled": true,
+      "config": {
+        "$board": "youtube summary url"
+      },
+      "x": -400.5718019630379,
+      "y": -961.2613408949264
+    },
+    {
+      "id": "$board_in_JM7d45NaBxRlxGcVzArxl",
+      "name": "$board_in",
+      "enabled": true,
+      "config": {
+        "$board": "youtube summary out"
+      },
+      "x": 4110.769400240797,
+      "y": -125.47096810708166
+    },
+    {
+      "id": "$board_out_u5tFv95AiXP8jiJlMHcmw",
+      "name": "$board_out",
+      "enabled": true,
+      "config": {
+        "$board": "youtube summary out"
+      },
+      "x": -80.74004963920723,
+      "y": -947.0059001001432
+    },
+    {
+      "id": "$display_data_M5y1gt0EHXj4oLB-p4xBF",
+      "name": "$display_data",
+      "enabled": true,
+      "config": {},
+      "x": 246.58696216013465,
+      "y": -1211.653271342164,
+      "width": 829,
+      "height": 949
+    },
+    {
+      "id": "mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5X",
+      "name": "mnemnk-langchain-youtube-loader",
+      "enabled": true,
+      "config": {},
+      "x": -28.512896363189995,
+      "y": -105.46972470145796
+    },
+    {
+      "id": "$display_data_LZOXJ1uPmZmekk3Me9uNK",
+      "name": "$display_data",
+      "enabled": true,
+      "config": {},
+      "x": -60.776442283749475,
+      "y": 113.94401559079137,
+      "width": 396,
+      "height": 394
+    },
+    {
+      "id": "mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wG",
+      "name": "mnemnk-langchain-recursive-character-text-splitter",
+      "enabled": true,
+      "config": {
+        "model_name": "gpt-3.5-turbo",
+        "chunk_size": 4000,
+        "chunk_overlap": 200
+      },
+      "x": 485.5808659111945,
+      "y": -97.85708433321732
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_MgXyfmIhZdMUjEPM2qNJM",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": true,
+      "config": {},
+      "x": 1584.0455253015284,
+      "y": -103.2633468599907
+    },
+    {
+      "id": "$display_data_22icOCOkLWZ-r4nahw0bZ",
+      "name": "$display_data",
+      "enabled": true,
+      "config": {},
+      "x": 501.554789759657,
+      "y": 318.36563116308633,
+      "width": 405,
+      "height": 872
+    },
+    {
+      "id": "mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRb",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": true,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 1936.3091936111332,
+      "y": -102.82933759680152
+    },
+    {
+      "id": "$get_property_SP25NzcF5-nBT3VHY2OEz",
+      "name": "$get_property",
+      "enabled": true,
+      "config": {
+        "property": "data.content"
+      },
+      "x": 2292.334522184142,
+      "y": -75.73769746773208
+    },
+    {
+      "id": "$text_join_vk4PPaTp6eTAc6UsFm3EJ",
+      "name": "$text_join",
+      "enabled": true,
+      "config": {
+        "sep": "\\n\\n---\\n\\n"
+      },
+      "x": 2615.295972678083,
+      "y": -82.60918855920984
+    },
+    {
+      "id": "$template_text_H-ZYBvlbOaH6l6a8o_JHs",
+      "name": "$template_text",
+      "enabled": true,
+      "config": {
+        "template": "The following is a merged summary of an article (it may have some repetition).\n- Please condense it into a shorter summary:\n  - start with one paragraph that sums up the article succinctly,\n  - followed by bullet points of key insights.\n- Remove any redundant or repeated information while keeping all critical points.\n- Omit any unnecessary introductory phrases.\n\nChunk summaries:\n{{value}}"
+      },
+      "x": 2949.4674199914125,
+      "y": -74.08857763181489,
+      "width": 476,
+      "height": 374
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_nSGBZUZe8Wst1CEngvIYr",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": true,
+      "config": {},
+      "x": 3523.9529103224745,
+      "y": -75.27878370001493
+    },
+    {
+      "id": "mnemnk-langchain-chat-model_-dCcVkxRDt4UychEo5d2y",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": true,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 3814.208286889933,
+      "y": -128.79748993349295
+    },
+    {
+      "id": "$template_text_DAuQJuWbrBeYsFIyInWW_",
+      "name": "$template_text",
+      "enabled": true,
+      "config": {
+        "template": "Summarize the following text. First, provide a brief one-paragraph overview of the content. Then, list the key points and takeaways as bullet points.\n- Omit any unnecessary introductory phrases.\n\nText:\n{{value}}"
+      },
+      "x": 941.8821973637082,
+      "y": -101.1923770017306,
+      "width": 476,
+      "height": 374
+    },
+    {
+      "id": "$display_data_OZTZ0ykgkacoROYBxasM0",
+      "name": "$display_data",
+      "enabled": true,
+      "config": {},
+      "x": 1727.3478352380644,
+      "y": 330.0950915862365,
+      "width": 779,
+      "height": 911
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__$string_input_kSNm4KPMypumnHtY-2B9xstring-$board_in_cQKvu7nWI9WBmxiVl1L93*",
+      "source": "$string_input_kSNm4KPMypumnHtY-2B9x",
+      "source_handle": "string",
+      "target": "$board_in_cQKvu7nWI9WBmxiVl1L93",
+      "target_handle": "*"
+    },
+    {
+      "id": "xy-edge__$board_out_u5tFv95AiXP8jiJlMHcmw*-$display_data_M5y1gt0EHXj4oLB-p4xBFdata",
+      "source": "$board_out_u5tFv95AiXP8jiJlMHcmw",
+      "source_handle": "*",
+      "target": "$display_data_M5y1gt0EHXj4oLB-p4xBF",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__$board_out_yMIyE_--qzDhTF2IwnwPs*-mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5Xurl",
+      "source": "$board_out_yMIyE_--qzDhTF2IwnwPs",
+      "source_handle": "*",
+      "target": "mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5X",
+      "target_handle": "url"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wGtexts-$display_data_22icOCOkLWZ-r4nahw0bZdata",
+      "source": "mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wG",
+      "source_handle": "texts",
+      "target": "$display_data_22icOCOkLWZ-r4nahw0bZ",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_MgXyfmIhZdMUjEPM2qNJMmessage-mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRbmessages",
+      "source": "mnemnk-langchain-to-human-message_MgXyfmIhZdMUjEPM2qNJM",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRb",
+      "target_handle": "messages"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRbmessage-$get_property_SP25NzcF5-nBT3VHY2OEzdata",
+      "source": "mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRb",
+      "source_handle": "message",
+      "target": "$get_property_SP25NzcF5-nBT3VHY2OEz",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__$get_property_SP25NzcF5-nBT3VHY2OEzdata-$text_join_vk4PPaTp6eTAc6UsFm3EJtexts",
+      "source": "$get_property_SP25NzcF5-nBT3VHY2OEz",
+      "source_handle": "data",
+      "target": "$text_join_vk4PPaTp6eTAc6UsFm3EJ",
+      "target_handle": "texts"
+    },
+    {
+      "id": "xy-edge__$text_join_vk4PPaTp6eTAc6UsFm3EJtext-$template_text_H-ZYBvlbOaH6l6a8o_JHsdata",
+      "source": "$text_join_vk4PPaTp6eTAc6UsFm3EJ",
+      "source_handle": "text",
+      "target": "$template_text_H-ZYBvlbOaH6l6a8o_JHs",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_nSGBZUZe8Wst1CEngvIYrmessage-mnemnk-langchain-chat-model_-dCcVkxRDt4UychEo5d2ymessages",
+      "source": "mnemnk-langchain-to-human-message_nSGBZUZe8Wst1CEngvIYr",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-chat-model_-dCcVkxRDt4UychEo5d2y",
+      "target_handle": "messages"
+    },
+    {
+      "id": "xy-edge__$template_text_H-ZYBvlbOaH6l6a8o_JHstext-mnemnk-langchain-to-human-message_nSGBZUZe8Wst1CEngvIYrstring",
+      "source": "$template_text_H-ZYBvlbOaH6l6a8o_JHs",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_nSGBZUZe8Wst1CEngvIYr",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wGtexts-$template_text_DAuQJuWbrBeYsFIyInWW_data",
+      "source": "mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wG",
+      "source_handle": "texts",
+      "target": "$template_text_DAuQJuWbrBeYsFIyInWW_",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__$template_text_DAuQJuWbrBeYsFIyInWW_text-mnemnk-langchain-to-human-message_MgXyfmIhZdMUjEPM2qNJMstring",
+      "source": "$template_text_DAuQJuWbrBeYsFIyInWW_",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_MgXyfmIhZdMUjEPM2qNJM",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRbmessage-$display_data_OZTZ0ykgkacoROYBxasM0data",
+      "source": "mnemnk-langchain-chat-model_ZcU3ymCHD4LmUTifZ1XRb",
+      "source_handle": "message",
+      "target": "$display_data_OZTZ0ykgkacoROYBxasM0",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5Xcontent-mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wGtext",
+      "source": "mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5X",
+      "source_handle": "content",
+      "target": "mnemnk-langchain-recursive-character-text-splitter_1b7WYOTRy5EAuQkG3j7wG",
+      "target_handle": "text"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5Xcontent-$display_data_LZOXJ1uPmZmekk3Me9uNKdata",
+      "source": "mnemnk-langchain-youtube-loader_yr9a0iJ5VzebrnJSNvi5X",
+      "source_handle": "content",
+      "target": "$display_data_LZOXJ1uPmZmekk3Me9uNK",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_-dCcVkxRDt4UychEo5d2ymessage-$board_in_JM7d45NaBxRlxGcVzArxl*",
+      "source": "mnemnk-langchain-chat-model_-dCcVkxRDt4UychEo5d2y",
+      "source_handle": "message",
+      "target": "$board_in_JM7d45NaBxRlxGcVzArxl",
+      "target_handle": "*"
+    }
+  ],
+  "name": "youtube_summary",
+  "viewport": {
+    "x": 1009.363727100839,
+    "y": 628.7751195337594,
+    "zoom": 0.4594793419988173
+  }
+}

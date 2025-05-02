@@ -1,0 +1,400 @@
+{
+  "nodes": [
+    {
+      "id": "mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJL",
+      "name": "mnemnk-langchain-web-base-loader",
+      "enabled": false,
+      "config": {},
+      "x": -127.20492089227106,
+      "y": -187.30852373231872
+    },
+    {
+      "id": "$string_input_iQwNWNalYWBAD51VLEVjE",
+      "name": "$string_input",
+      "enabled": false,
+      "config": {
+        "string": "https://www.microsoft.com/en-us/research/blog/total-recall-how-to-have-it-all/"
+      },
+      "x": -492.3256214920105,
+      "y": -1296.5172568881649,
+      "width": 564,
+      "height": 177
+    },
+    {
+      "id": "$display_data_VSK-nf51H_MpMqGa2CSIQ",
+      "name": "$display_data",
+      "enabled": false,
+      "config": {},
+      "x": -122.3395659421862,
+      "y": 243.76028343306177,
+      "width": 448,
+      "height": 850
+    },
+    {
+      "id": "mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6",
+      "name": "mnemnk-langchain-recursive-character-text-splitter",
+      "enabled": false,
+      "config": {
+        "model_name": "gpt-3.5-turbo",
+        "chunk_size": 2000,
+        "chunk_overlap": 200
+      },
+      "x": 434.4643490123105,
+      "y": -183.93735618837897
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_eDni6IcqufDrezez26rw9",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": false,
+      "config": {},
+      "x": 1532.9290084026447,
+      "y": -189.34361871515245
+    },
+    {
+      "id": "$display_data_G309h7NRRoFZ4ne69jMP2",
+      "name": "$display_data",
+      "enabled": false,
+      "config": {},
+      "x": 441.8434794407853,
+      "y": 236.88015272791253,
+      "width": 790,
+      "height": 869
+    },
+    {
+      "id": "mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqx",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": false,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 1885.1926767122495,
+      "y": -188.90960945196335
+    },
+    {
+      "id": "$get_property_JghIF8-Cgq0ckN_PAmhVa",
+      "name": "$get_property",
+      "enabled": false,
+      "config": {
+        "property": "data.content"
+      },
+      "x": 2241.218005285258,
+      "y": -161.81796932289376
+    },
+    {
+      "id": "$text_join_ZtGpXPZ674n4cQAhf4JZV",
+      "name": "$text_join",
+      "enabled": false,
+      "config": {
+        "sep": "\\n\\n---\\n\\n"
+      },
+      "x": 2564.1794557791995,
+      "y": -168.6894604143716
+    },
+    {
+      "id": "$template_text_JzOVLqpwoNAH8NW466Mn-",
+      "name": "$template_text",
+      "enabled": false,
+      "config": {
+        "template": "The following is a merged summary of an article (it may have some repetition).\n- Please condense it into a shorter summary:\n  - start with one paragraph that sums up the article succinctly,\n  - followed by bullet points of key insights.\n- Remove any redundant or repeated information while keeping all critical points.\n- Omit any unnecessary introductory phrases.\n\nChunk summaries:\n{{value}}"
+      },
+      "x": 2893.756109672541,
+      "y": -162.46624619697073,
+      "width": 476,
+      "height": 394
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_87G4eJOLPRINBbjgiEKXQ",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": false,
+      "config": {},
+      "x": 3472.836393423591,
+      "y": -161.35905555517672
+    },
+    {
+      "id": "mnemnk-langchain-chat-model_QaSQz6VGws8g66vLYd5PD",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": false,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 3760.0603368580287,
+      "y": -184.56343045844775
+    },
+    {
+      "id": "$board_out_JfmzkEAKS1AHVMd0w4pT3",
+      "name": "$board_out",
+      "enabled": false,
+      "config": {
+        "$board": "web summary url"
+      },
+      "x": -464.7760735746504,
+      "y": -186.77636874317645
+    },
+    {
+      "id": "$board_in_xoKKu2m8EihGnxgpPYC-r",
+      "name": "$board_in",
+      "enabled": false,
+      "config": {
+        "$board": "web summary url"
+      },
+      "x": -480.5718019630379,
+      "y": -1041.2613408949264
+    },
+    {
+      "id": "$board_in_onJh7QgaxigR9MVgC8SKc",
+      "name": "$board_in",
+      "enabled": false,
+      "config": {
+        "$board": "web summary out"
+      },
+      "x": 5548.4303115871,
+      "y": -177.06191832061523
+    },
+    {
+      "id": "$board_out_I_RCLKoFwZNrWcMktldfZ",
+      "name": "$board_out",
+      "enabled": false,
+      "config": {
+        "$board": "web summary out"
+      },
+      "x": -160.74004963920723,
+      "y": -1027.0059001001432
+    },
+    {
+      "id": "$display_data_7gzMKkOCLZUcNoSU2HeMR",
+      "name": "$display_data",
+      "enabled": false,
+      "config": {},
+      "x": 166.58696216013465,
+      "y": -1291.653271342164,
+      "width": 829,
+      "height": 949
+    },
+    {
+      "id": "$template_text_QrYw59uHVZXwkMk4B82K1",
+      "name": "$template_text",
+      "enabled": false,
+      "config": {
+        "template": "Summarize the following text. First, provide a brief one-paragraph overview of the content. Then, list the key points and takeaways as bullet points.\n- Omit any unnecessary introductory phrases.\n\nText:\n{{value}}"
+      },
+      "x": 928.4151269612706,
+      "y": -187.93108182910785,
+      "width": 476,
+      "height": 374
+    },
+    {
+      "id": "$display_data_rkZ2qpPyc6Y8w_1cH9G1X",
+      "name": "$display_data",
+      "enabled": false,
+      "config": {},
+      "x": 1903.6735926285871,
+      "y": 221.04085263113464,
+      "width": 792,
+      "height": 909
+    },
+    {
+      "id": "$template_text_nT4CJAkBzUIIpYSRhUVT0",
+      "name": "$template_text",
+      "enabled": false,
+      "config": {
+        "template": "以下の英文を自然で読みやすい日本語に翻訳してください。原文の意味を正確に伝えてください。\n\nEnglish summary:\n{{value}}"
+      },
+      "x": 4396.226388303239,
+      "y": -150.40022795982074,
+      "width": 476,
+      "height": 374
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_szyPv8EuKY-aAZs6FNTlv",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": false,
+      "config": {},
+      "x": 4977.551607961096,
+      "y": -151.59318016189698
+    },
+    {
+      "id": "mnemnk-langchain-chat-model_p4T2nkVT5ewoW2ElOS4lX",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": false,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 5251.242682840742,
+      "y": -167.76423788323476
+    },
+    {
+      "id": "$get_property__vVW-UNXgcNl-tb30kqZL",
+      "name": "$get_property",
+      "enabled": false,
+      "config": {
+        "property": "data.content"
+      },
+      "x": 4066.0944133987587,
+      "y": -151.79738341955303
+    },
+    {
+      "id": "$display_data_CgAT51q8ChQ-yMsHX9eQe",
+      "name": "$display_data",
+      "enabled": false,
+      "config": {},
+      "x": 3644.4572353914346,
+      "y": 243.128599065968,
+      "width": 598,
+      "height": 902
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJLcontent-$display_data_VSK-nf51H_MpMqGa2CSIQdata",
+      "source": "mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJL",
+      "source_handle": "content",
+      "target": "$display_data_VSK-nf51H_MpMqGa2CSIQ",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJLcontent-mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6text",
+      "source": "mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJL",
+      "source_handle": "content",
+      "target": "mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6",
+      "target_handle": "text"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6texts-$display_data_G309h7NRRoFZ4ne69jMP2data",
+      "source": "mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6",
+      "source_handle": "texts",
+      "target": "$display_data_G309h7NRRoFZ4ne69jMP2",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_eDni6IcqufDrezez26rw9message-mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqxmessages",
+      "source": "mnemnk-langchain-to-human-message_eDni6IcqufDrezez26rw9",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqx",
+      "target_handle": "messages"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqxmessage-$get_property_JghIF8-Cgq0ckN_PAmhVadata",
+      "source": "mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqx",
+      "source_handle": "message",
+      "target": "$get_property_JghIF8-Cgq0ckN_PAmhVa",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__$get_property_JghIF8-Cgq0ckN_PAmhVadata-$text_join_ZtGpXPZ674n4cQAhf4JZVtexts",
+      "source": "$get_property_JghIF8-Cgq0ckN_PAmhVa",
+      "source_handle": "data",
+      "target": "$text_join_ZtGpXPZ674n4cQAhf4JZV",
+      "target_handle": "texts"
+    },
+    {
+      "id": "xy-edge__$text_join_ZtGpXPZ674n4cQAhf4JZVtext-$template_text_JzOVLqpwoNAH8NW466Mn-data",
+      "source": "$text_join_ZtGpXPZ674n4cQAhf4JZV",
+      "source_handle": "text",
+      "target": "$template_text_JzOVLqpwoNAH8NW466Mn-",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_87G4eJOLPRINBbjgiEKXQmessage-mnemnk-langchain-chat-model_QaSQz6VGws8g66vLYd5PDmessages",
+      "source": "mnemnk-langchain-to-human-message_87G4eJOLPRINBbjgiEKXQ",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-chat-model_QaSQz6VGws8g66vLYd5PD",
+      "target_handle": "messages"
+    },
+    {
+      "id": "xy-edge__$template_text_JzOVLqpwoNAH8NW466Mn-text-mnemnk-langchain-to-human-message_87G4eJOLPRINBbjgiEKXQstring",
+      "source": "$template_text_JzOVLqpwoNAH8NW466Mn-",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_87G4eJOLPRINBbjgiEKXQ",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__$board_out_JfmzkEAKS1AHVMd0w4pT3*-mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJLurl",
+      "source": "$board_out_JfmzkEAKS1AHVMd0w4pT3",
+      "source_handle": "*",
+      "target": "mnemnk-langchain-web-base-loader_YUznDmg9aVWggXCfkcAJL",
+      "target_handle": "url"
+    },
+    {
+      "id": "xy-edge__$string_input_iQwNWNalYWBAD51VLEVjEstring-$board_in_xoKKu2m8EihGnxgpPYC-r*",
+      "source": "$string_input_iQwNWNalYWBAD51VLEVjE",
+      "source_handle": "string",
+      "target": "$board_in_xoKKu2m8EihGnxgpPYC-r",
+      "target_handle": "*"
+    },
+    {
+      "id": "xy-edge__$board_out_I_RCLKoFwZNrWcMktldfZ*-$display_data_7gzMKkOCLZUcNoSU2HeMRdata",
+      "source": "$board_out_I_RCLKoFwZNrWcMktldfZ",
+      "source_handle": "*",
+      "target": "$display_data_7gzMKkOCLZUcNoSU2HeMR",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6texts-$template_text_QrYw59uHVZXwkMk4B82K1data",
+      "source": "mnemnk-langchain-recursive-character-text-splitter_S0xw0VFPs1RaxEeqyRHg6",
+      "source_handle": "texts",
+      "target": "$template_text_QrYw59uHVZXwkMk4B82K1",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__$template_text_QrYw59uHVZXwkMk4B82K1text-mnemnk-langchain-to-human-message_eDni6IcqufDrezez26rw9string",
+      "source": "$template_text_QrYw59uHVZXwkMk4B82K1",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_eDni6IcqufDrezez26rw9",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqxmessage-$display_data_rkZ2qpPyc6Y8w_1cH9G1Xdata",
+      "source": "mnemnk-langchain-chat-model_nj76MrsCCl_w12gGbjRqx",
+      "source_handle": "message",
+      "target": "$display_data_rkZ2qpPyc6Y8w_1cH9G1X",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_szyPv8EuKY-aAZs6FNTlvmessage-mnemnk-langchain-chat-model_p4T2nkVT5ewoW2ElOS4lXmessages",
+      "source": "mnemnk-langchain-to-human-message_szyPv8EuKY-aAZs6FNTlv",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-chat-model_p4T2nkVT5ewoW2ElOS4lX",
+      "target_handle": "messages"
+    },
+    {
+      "id": "xy-edge__$template_text_nT4CJAkBzUIIpYSRhUVT0text-mnemnk-langchain-to-human-message_szyPv8EuKY-aAZs6FNTlvstring",
+      "source": "$template_text_nT4CJAkBzUIIpYSRhUVT0",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_szyPv8EuKY-aAZs6FNTlv",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__$get_property__vVW-UNXgcNl-tb30kqZLdata-$template_text_nT4CJAkBzUIIpYSRhUVT0data",
+      "source": "$get_property__vVW-UNXgcNl-tb30kqZL",
+      "source_handle": "data",
+      "target": "$template_text_nT4CJAkBzUIIpYSRhUVT0",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_p4T2nkVT5ewoW2ElOS4lXmessage-$board_in_onJh7QgaxigR9MVgC8SKc*",
+      "source": "mnemnk-langchain-chat-model_p4T2nkVT5ewoW2ElOS4lX",
+      "source_handle": "message",
+      "target": "$board_in_onJh7QgaxigR9MVgC8SKc",
+      "target_handle": "*"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_QaSQz6VGws8g66vLYd5PDmessage-$display_data_CgAT51q8ChQ-yMsHX9eQedata",
+      "source": "mnemnk-langchain-chat-model_QaSQz6VGws8g66vLYd5PD",
+      "source_handle": "message",
+      "target": "$display_data_CgAT51q8ChQ-yMsHX9eQe",
+      "target_handle": "data"
+    }
+  ],
+  "name": "web_summary_ja",
+  "viewport": {
+    "x": 599.0140656152712,
+    "y": 518.4303346473159,
+    "zoom": 0.2871745887492681
+  }
+}
