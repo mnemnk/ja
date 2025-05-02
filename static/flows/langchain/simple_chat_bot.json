@@ -1,0 +1,119 @@
+{
+  "nodes": [
+    {
+      "id": "$text_input_6Cul7yE-HomX306TeIaQ1",
+      "name": "$text_input",
+      "enabled": true,
+      "config": {
+        "text": ""
+      },
+      "x": 52.51079025791864,
+      "y": 436.8667401943941,
+      "width": 351,
+      "height": 221
+    },
+    {
+      "id": "$unit_input_QrXMQUqhrODnYHhASD3Kg",
+      "name": "$unit_input",
+      "enabled": true,
+      "config": {
+        "unit": null
+      },
+      "title": "Reset Session",
+      "x": 59.95493232050168,
+      "y": 705.607153001193
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_FrnDg-ZvXe4LwLtJL5-yz",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": true,
+      "config": {},
+      "x": 518.4073706313869,
+      "y": 437.0340052244925
+    },
+    {
+      "id": "mnemnk-langchain-chat-model_Gs_lKpdeqpYLCyFBKsvCc",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": true,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 872.2506807610243,
+      "y": 821.4258487635118
+    },
+    {
+      "id": "mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSX",
+      "name": "mnemnk-langchain-in-memory-chat-history",
+      "enabled": true,
+      "config": {
+        "max_messages": 7,
+        "start_on": "human",
+        "include_system": false
+      },
+      "x": 862.0296586430162,
+      "y": 436.570685573166
+    },
+    {
+      "id": "$display_data_SPvyVjEdXok7o1tmKP9yY",
+      "name": "$display_data",
+      "enabled": true,
+      "config": {},
+      "x": 1209.9893434740227,
+      "y": 438.0156584519138,
+      "width": 594,
+      "height": 715
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__$text_input_6Cul7yE-HomX306TeIaQ1text-mnemnk-langchain-to-human-message_FrnDg-ZvXe4LwLtJL5-yzstring",
+      "source": "$text_input_6Cul7yE-HomX306TeIaQ1",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_FrnDg-ZvXe4LwLtJL5-yz",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_FrnDg-ZvXe4LwLtJL5-yzmessage-mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSXmessage",
+      "source": "mnemnk-langchain-to-human-message_FrnDg-ZvXe4LwLtJL5-yz",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSX",
+      "target_handle": "message"
+    },
+    {
+      "id": "xy-edge__$unit_input_QrXMQUqhrODnYHhASD3Kgunit-mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSXreset",
+      "source": "$unit_input_QrXMQUqhrODnYHhASD3Kg",
+      "source_handle": "unit",
+      "target": "mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSX",
+      "target_handle": "reset"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSXmessages-mnemnk-langchain-chat-model_Gs_lKpdeqpYLCyFBKsvCcmessages",
+      "source": "mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSX",
+      "source_handle": "messages",
+      "target": "mnemnk-langchain-chat-model_Gs_lKpdeqpYLCyFBKsvCc",
+      "target_handle": "messages"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_Gs_lKpdeqpYLCyFBKsvCcmessage-mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSXmessage",
+      "source": "mnemnk-langchain-chat-model_Gs_lKpdeqpYLCyFBKsvCc",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSX",
+      "target_handle": "message"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSXmessages-$display_data_SPvyVjEdXok7o1tmKP9yYdata",
+      "source": "mnemnk-langchain-in-memory-chat-history_jaOzAK3YG0vprdf4A8LSX",
+      "source_handle": "messages",
+      "target": "$display_data_SPvyVjEdXok7o1tmKP9yY",
+      "target_handle": "data"
+    }
+  ],
+  "name": "LangChain/Chat Model/simple chat",
+  "viewport": {
+    "x": 416.20084869786274,
+    "y": -91.54182303165811,
+    "zoom": 0.5000000000000013
+  }
+}

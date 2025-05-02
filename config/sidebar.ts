@@ -40,5 +40,15 @@ export default {
                 },
             ]
         },
+        {
+            title: 'Flows',
+            collapsible: true,
+            items: [
+                {
+                    title: 'LangChain',
+                    to: '/guide/flows/langchain/',
+                },
+            ],
+        },
     ],
 };

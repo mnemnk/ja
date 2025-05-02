@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "mnemnk-langchain-chat-model_Qlg6vg9twqLC9K5dWRKfu",
+      "name": "mnemnk-langchain-chat-model",
+      "enabled": true,
+      "config": {
+        "model": "gemma3:12b",
+        "model_provider": "ollama",
+        "kwargs": {}
+      },
+      "x": 1477.3938197219086,
+      "y": 213.92220624872945
+    },
+    {
+      "id": "$text_input_KDSFU2n6xaOo8AcDNRojJ",
+      "name": "$text_input",
+      "enabled": true,
+      "config": {
+        "text": "write a short novel"
+      },
+      "x": 933.6152652085916,
+      "y": 203.969479762174
+    },
+    {
+      "id": "mnemnk-langchain-to-human-message_iXVaCpqCVifv5jJfpY2yT",
+      "name": "mnemnk-langchain-to-human-message",
+      "enabled": true,
+      "config": {},
+      "x": 1202.802180087592,
+      "y": 209.6117419969173
+    },
+    {
+      "id": "$display_data_5GIPT-SljdnPwzlGL3C2t",
+      "name": "$display_data",
+      "enabled": true,
+      "config": {},
+      "x": 1753.2287190515683,
+      "y": 207.9733862010376,
+      "width": 430,
+      "height": 904
+    }
+  ],
+  "edges": [
+    {
+      "id": "xy-edge__$text_input_KDSFU2n6xaOo8AcDNRojJtext-mnemnk-langchain-to-human-message_iXVaCpqCVifv5jJfpY2yTstring",
+      "source": "$text_input_KDSFU2n6xaOo8AcDNRojJ",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_iXVaCpqCVifv5jJfpY2yT",
+      "target_handle": "string"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_Qlg6vg9twqLC9K5dWRKfumessage-$display_data_5GIPT-SljdnPwzlGL3C2tdata",
+      "source": "mnemnk-langchain-chat-model_Qlg6vg9twqLC9K5dWRKfu",
+      "source_handle": "message",
+      "target": "$display_data_5GIPT-SljdnPwzlGL3C2t",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-to-human-message_iXVaCpqCVifv5jJfpY2yTmessage-mnemnk-langchain-chat-model_Qlg6vg9twqLC9K5dWRKfumessages",
+      "source": "mnemnk-langchain-to-human-message_iXVaCpqCVifv5jJfpY2yT",
+      "source_handle": "message",
+      "target": "mnemnk-langchain-chat-model_Qlg6vg9twqLC9K5dWRKfu",
+      "target_handle": "messages"
+    }
+  ],
+  "name": "LangChain/Chat Model/write a novel",
+  "viewport": {
+    "x": -88.93024871895386,
+    "y": -10.27968161944051,
+    "zoom": 0.6825891593756983
+  }
+}
