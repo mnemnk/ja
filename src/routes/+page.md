@@ -2,7 +2,7 @@
 title: Mnemnk
 description: A personal lifelogging platform that records your activities and enhances them through a continuously running multi-agent system.
 heroImage: /Square284x284Logo.png
-tagline: あなたの活動を記録しマルチエージェントシステムによってサポートするライフロギングプラットフォーム
+tagline: 活動を記録しマルチエージェントシステムによってサポートするライフロギングプラットフォーム
 actions:
   - label: Read the docs
     type: primary
