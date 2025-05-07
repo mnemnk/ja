@@ -26,7 +26,7 @@
       "enabled": true,
       "config": {},
       "x": -122.3395659421862,
-      "y": 243.76028343306174,
+      "y": 243.76028343306177,
       "width": 448,
       "height": 850
     },
@@ -55,7 +55,7 @@
       "name": "$display_data",
       "enabled": true,
       "config": {},
-      "x": 441.84347944078525,
+      "x": 441.8434794407853,
       "y": 236.88015272791253,
       "width": 790,
       "height": 869
@@ -71,38 +71,6 @@
       },
       "x": 1885.1926767122495,
       "y": -188.90960945196335
-    },
-    {
-      "id": "$get_property_807YVhkgnxYrWHd-L3Jti",
-      "name": "$get_property",
-      "enabled": true,
-      "config": {
-        "property": "data.content"
-      },
-      "x": 2241.218005285258,
-      "y": -161.81796932289376
-    },
-    {
-      "id": "$text_join_YAaUfE-dQq3vToAAIWl95",
-      "name": "$text_join",
-      "enabled": true,
-      "config": {
-        "sep": "\\n\\n---\\n\\n"
-      },
-      "x": 2564.1794557791995,
-      "y": -168.6894604143716
-    },
-    {
-      "id": "$template_text_4cjZ5HwUbflkIkGeJv8ij",
-      "name": "$template_text",
-      "enabled": true,
-      "config": {
-        "template": "The following is a merged summary of an article (it may have some repetition).\n- Please condense it into a shorter summary:\n  - start with one paragraph that sums up the article succinctly,\n  - followed by bullet points of key insights.\n- Remove any redundant or repeated information while keeping all critical points.\n- Omit any unnecessary introductory phrases.\n\nChunk summaries:\n{{value}}"
-      },
-      "x": 2893.756109672541,
-      "y": -162.46624619697073,
-      "width": 476,
-      "height": 394
     },
     {
       "id": "mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01",
@@ -195,6 +163,18 @@
       "y": 221.04085263113464,
       "width": 792,
       "height": 909
+    },
+    {
+      "id": "$template_array_ujvpOXNz-Mr79ZXN1awtn",
+      "name": "$template_array",
+      "enabled": true,
+      "config": {
+        "template": "The following is a merged summary of an article (it may have some repetition).\n- Please condense it into a shorter summary:\n  - start with one paragraph that sums up the article succinctly,\n  - followed by bullet points of key insights.\n- Remove any redundant or repeated information while keeping all critical points.\n- Omit any unnecessary introductory phrases.\n\nChunk summaries:\n{{#each value}}\n{{this.data.content}}\n\n---\n\n{{/each}}"
+      },
+      "x": 2769.959691440748,
+      "y": -155.45369647839686,
+      "width": 626,
+      "height": 515
     }
   ],
   "edges": [
@@ -227,39 +207,11 @@
       "target_handle": "messages"
     },
     {
-      "id": "xy-edge__mnemnk-langchain-chat-model_9mSSbyfkdVNK1HE6LoXXvmessage-$get_property_807YVhkgnxYrWHd-L3Jtidata",
-      "source": "mnemnk-langchain-chat-model_9mSSbyfkdVNK1HE6LoXXv",
-      "source_handle": "message",
-      "target": "$get_property_807YVhkgnxYrWHd-L3Jti",
-      "target_handle": "data"
-    },
-    {
-      "id": "xy-edge__$get_property_807YVhkgnxYrWHd-L3Jtidata-$text_join_YAaUfE-dQq3vToAAIWl95texts",
-      "source": "$get_property_807YVhkgnxYrWHd-L3Jti",
-      "source_handle": "data",
-      "target": "$text_join_YAaUfE-dQq3vToAAIWl95",
-      "target_handle": "texts"
-    },
-    {
-      "id": "xy-edge__$text_join_YAaUfE-dQq3vToAAIWl95text-$template_text_4cjZ5HwUbflkIkGeJv8ijdata",
-      "source": "$text_join_YAaUfE-dQq3vToAAIWl95",
-      "source_handle": "text",
-      "target": "$template_text_4cjZ5HwUbflkIkGeJv8ij",
-      "target_handle": "data"
-    },
-    {
       "id": "xy-edge__mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01message-mnemnk-langchain-chat-model_LhrHDtonrxkh7R0t1BOQxmessages",
       "source": "mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01",
       "source_handle": "message",
       "target": "mnemnk-langchain-chat-model_LhrHDtonrxkh7R0t1BOQx",
       "target_handle": "messages"
-    },
-    {
-      "id": "xy-edge__$template_text_4cjZ5HwUbflkIkGeJv8ijtext-mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01string",
-      "source": "$template_text_4cjZ5HwUbflkIkGeJv8ij",
-      "source_handle": "text",
-      "target": "mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01",
-      "target_handle": "string"
     },
     {
       "id": "xy-edge__$board_out_9NWarVrJlDYPaoXBbhRLx*-mnemnk-langchain-web-base-loader_Rx-QHR-yk4DW7bYWBpRDNurl",
@@ -309,12 +261,26 @@
       "source_handle": "message",
       "target": "$board_in_1r8NdtXHHR0f1C79Gf4J5",
       "target_handle": "*"
+    },
+    {
+      "id": "xy-edge__mnemnk-langchain-chat-model_9mSSbyfkdVNK1HE6LoXXvmessage-$template_array_ujvpOXNz-Mr79ZXN1awtndata",
+      "source": "mnemnk-langchain-chat-model_9mSSbyfkdVNK1HE6LoXXv",
+      "source_handle": "message",
+      "target": "$template_array_ujvpOXNz-Mr79ZXN1awtn",
+      "target_handle": "data"
+    },
+    {
+      "id": "xy-edge__$template_array_ujvpOXNz-Mr79ZXN1awtntext-mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01string",
+      "source": "$template_array_ujvpOXNz-Mr79ZXN1awtn",
+      "source_handle": "text",
+      "target": "mnemnk-langchain-to-human-message_Uaebpd9q6SWJA8MyC7h01",
+      "target_handle": "string"
     }
   ],
   "name": "web_summary",
   "viewport": {
-    "x": 739.3799394325473,
-    "y": 620.2492371396883,
-    "zoom": 0.43527528164807616
+    "x": 452.6916345284152,
+    "y": 487.6082793463828,
+    "zoom": 0.2871745887492683
   }
 }
