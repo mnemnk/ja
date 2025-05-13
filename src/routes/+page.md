@@ -39,3 +39,16 @@ features:
       collection: streamline-emojis
       name: woman-technologist-2
 ---
+<img class="bg-img" src="/background.png" alt="background" />
+
+<style>
+  .bg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 1300px;
+    object-fit: cover;
+  }
+</style>
